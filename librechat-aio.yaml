@@ -1,22 +1,35 @@
-# Configuration version (required)
 version: 1.1.6
 
-# Cache settings: Set to true to enable caching
 cache: true
 
-# Definition of custom endpoints
+registration:
+  socialLogins: ["discord", "facebook", "github", "google", "openid"]
+
 endpoints:
   custom:
-    - name: "CablyAI"
+    # Anyscale
+    # # Model list: https://console.anyscale.com/v2/playground
+    - name: "Anyscale"
       apiKey: "${CABLYAI_API_KEY}"
       baseURL: "https://cablyai.com/"
       models:
-        default: "${CABLYAI_MODELS}"
-        fetch: true
+        default: [
+          "meta-llama/Llama-2-7b-chat-hf",
+          "meta-llama/Llama-2-13b-chat-hf",
+          "meta-llama/Llama-2-70b-chat-hf",
+          "codellama/CodeLlama-34b-Instruct-hf",
+          "codellama/CodeLlama-70b-Instruct-hf",
+          "mistralai/Mistral-7B-Instruct-v0.1",
+          "mistralai/Mixtral-8x7B-Instruct-v0.1",
+          "mlabonne/NeuralHermes-2.5-Mistral-7B",
+          "Open-Orca/Mistral-7B-OpenOrca",
+          "HuggingFaceH4/zephyr-7b-beta",
+          "google/gemma-7b-it"
+          ]
+        fetch: false
       titleConvo: true
-      titleMethod: "completion"
-      titleModel: "gpt-3.5-turbo"
+      titleModel: "meta-llama/Llama-2-7b-chat-hf"
       summarize: false
-      summaryModel: "gpt-3.5-turbo"
+      summaryModel: "meta-llama/Llama-2-7b-chat-hf"
       forcePrompt: false
-      modelDisplayLabel: "CablyAI"
+      modelDisplayLabel: "Anyscale"
