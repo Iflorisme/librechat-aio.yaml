@@ -7,29 +7,15 @@ registration:
 
 endpoints:
   custom:
-    # Anyscale
-    # # Model list: https://console.anyscale.com/v2/playground
-    - name: "Anyscale"
+    - name: "CablyAI"
       apiKey: "${CABLYAI_API_KEY}"
       baseURL: "https://cablyai.com/"
       models:
-        default: [
-          "meta-llama/Llama-2-7b-chat-hf",
-          "meta-llama/Llama-2-13b-chat-hf",
-          "meta-llama/Llama-2-70b-chat-hf",
-          "codellama/CodeLlama-34b-Instruct-hf",
-          "codellama/CodeLlama-70b-Instruct-hf",
-          "mistralai/Mistral-7B-Instruct-v0.1",
-          "mistralai/Mixtral-8x7B-Instruct-v0.1",
-          "mlabonne/NeuralHermes-2.5-Mistral-7B",
-          "Open-Orca/Mistral-7B-OpenOrca",
-          "HuggingFaceH4/zephyr-7b-beta",
-          "google/gemma-7b-it"
-          ]
+        default: ${CABLYAI_MODELS}
         fetch: false
       titleConvo: true
-      titleModel: "meta-llama/Llama-2-7b-chat-hf"
+      titleModel: "gpt-3.5-turbo"
       summarize: false
-      summaryModel: "meta-llama/Llama-2-7b-chat-hf"
+      summaryModel: "gpt-3.5-turbo"
       forcePrompt: false
-      modelDisplayLabel: "Anyscale"
+      modelDisplayLabel: "CablyAI"
