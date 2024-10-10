@@ -8,7 +8,7 @@ registration:
 endpoints:
   custom:
     - name: "CablyAI"
-      apiKey: "${CABLYAI_API_KEY}"
+      apiKey: ${CABLYAI_API_KEY}
       baseURL: "https://cablyai.com/"
       models:
         default: 
