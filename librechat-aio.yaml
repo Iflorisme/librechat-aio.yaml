@@ -9,7 +9,7 @@ endpoints:
   custom:
     - name: "CablyAI"
       apiKey: "${CABLYAI_API_KEY}"
-      baseURL: "https://cablyai.com/"
+      baseURL: "https://cablyai.com/v1/chat/completions"
       models:
         default: 
           - "openai/chatgpt-4o-latest"
