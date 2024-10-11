@@ -45,3 +45,31 @@ endpoints:
       summaryModel: "claude-3.5-sonnet"
       forcePrompt: false
       modelDisplayLabel: "CablyAI"
+
+    - name: "Image Generations"
+      apiKey: ${CABLYAI_API_KEY}
+      baseURL: "https://cablyai.com/v1/images/generations"
+      models:
+        default:
+          - "flux"
+          - "dalle-3"
+          - "flux-anime"
+          - "flux-realism"
+          - "flux-disney"
+          - "flux-3d"
+          - "flux-pixel"
+          - "flux-4o"
+          - "any-dark"
+          - "flux-schnell"
+          - "flux-dev"
+          - "flux-pro"
+          - "stable-diffusion-3"
+          - "playground-v2.5"
+          - "kandinsky-3.1"
+          - "sdxl-lightning-4step"
+          - "realdream-xl"
+        fetch: false
+      titleConvo: false
+      summarize: false
+      forcePrompt: false
+      modelDisplayLabel: "Image Generations"
