@@ -5,6 +5,14 @@ cache: true
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
 
+speech:
+  tts:
+    openai:
+      url: 'https://cablyai.com/v1/audio/speech'
+      apiKey: '${CABLYAI_API_KEY}'
+      model: 'alloy'
+      voices: ['alloy', 'shimmer', 'echo', 'fable', 'onyx', 'nova', 'stable-audio']
+
 endpoints:
   custom:
     - name: "CablyAI"
