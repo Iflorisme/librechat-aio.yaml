@@ -51,7 +51,7 @@ endpoints:
       titleModel: "claude-3.5-sonnet"
       summarize: false
       summaryModel: "claude-3.5-sonnet"
-      forcePrompt: false
+      forcePrompt: True
       modelDisplayLabel: "CablyAI"
 
     - name: "Image Generations"
@@ -79,5 +79,5 @@ endpoints:
         fetch: false
       titleConvo: false
       summarize: false
-      forcePrompt: false
+      forcePrompt: True
       modelDisplayLabel: "Image Generations"
